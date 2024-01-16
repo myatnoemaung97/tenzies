@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #393c3f,
+    #1a191b
+  );
+}
+
+main {
+  width: 500px;
+  height: 500px;
+  background-color: #555;
+}
+
+.--dice-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.--die {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  margin: 0 auto;
+  font-size: 25px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.--dot {
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.--dots-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.--dots-two {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  transform: rotate(45deg);
+}
+
+.--dots-three {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  transform: rotate(-45deg);
+}
+
+.--dots-four {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+}
+
+.--dots-five {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5px;
+}
+
+.--dots-five :nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+.--dots-six  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5px;
+}
