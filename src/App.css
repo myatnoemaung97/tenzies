@@ -13,12 +13,15 @@ body {
 }
 
 main {
-  width: 500px;
+  max-width: 1000px;
   height: 500px;
   background-color: #555;
+  margin: 0 auto;
+  padding: 10px 30px;
 }
 
 .--dice-container {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
@@ -33,6 +36,8 @@ main {
   border-radius: 8px;
   position: relative;
 }
+
+
 
 .--dot {
   width: 12px;
@@ -82,4 +87,16 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .--die {
+    width: 45px;
+    height: 45px;
+  }
+
+  .--dot {
+    width: 8px;
+    height: 8px;
+  }
 }

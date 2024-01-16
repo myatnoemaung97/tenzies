@@ -92,7 +92,7 @@ function App() {
 
   return (
     <>
-      <main className='rounded-4 px-5 py-2 d-flex flex-column justify-content-around'>
+      <main className='rounded-4 d-flex flex-column justify-content-around'>
         <h1 className='text-white text-center'>Tenzies</h1>
 
         <div className='d-flex justify-content-around text-white text-center'>
