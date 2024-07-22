@@ -4,20 +4,30 @@
 }
 
 body {
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(
     45deg,
     #393c3f,
     #1a191b
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main {
-  max-width: 1000px;
-  height: 500px;
+#root {
   background-color: #555;
-  margin: 0 auto;
-  padding: 10px 30px;
+  border-radius: 20px;
+  padding: 25px 0;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Tenzies */
+
+.--sub-title {
+  font-size: 20px;
 }
 
 .--dice-container {
@@ -36,8 +46,6 @@ main {
   border-radius: 8px;
   position: relative;
 }
-
-
 
 .--dot {
   width: 12px;
@@ -100,3 +108,173 @@ main {
     height: 8px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .--die {
+    width: 35px;
+    height: 35px;
+  }
+
+  .--dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* quiz */
+
+.--answer {
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.--quiz-card {
+  animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* TicTacToe */
+
+.--tic-tac-toe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.--tile {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.--tile:nth-of-type(1) {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.--tile:nth-of-type(2) {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.--tile:nth-of-type(3) {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.--tile:nth-of-type(4) {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.--tile:nth-of-type(5) {
+  border: 1px solid black;
+}
+
+.--tile:nth-of-type(6) {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.--tile:nth-of-type(7) {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.--tile:nth-of-type(8) {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.--tile:nth-of-type(9) {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.hor1, .hor2, .hor3, .ver1, .ver2, .ver3, .dia1, .dia2 {
+  position: absolute;
+  background-color: black;
+}
+
+.hor1 {
+  top: 16.67%;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.hor2 {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.hor3 {
+  bottom: 16.67%;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.ver1 {
+  left: 16.67%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+}
+
+.ver2 {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+}
+
+.ver3 {
+  right: 16.67%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+}
+
+.dia1 {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: rotate(45deg);
+}
+
+.dia2 {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: rotate(-45deg);
+}
+
+/* .--avatar {
+  animation: fadeInOut 0.5s;
+} */
+
